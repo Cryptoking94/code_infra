@@ -1,3 +1,13 @@
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = ">= 3.0, < 5.0"
+    }
+  }
+
+  required_version = ">= 0.13"
+}
 provider "aws" {
   region = "us-east-1" # Update with your desired AWS region
   # Add other authentication parameters if necessary
