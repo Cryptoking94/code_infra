@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "ap-south-1" # Update with your desired AWS region
+  region = "us-east-1" # Update with your desired AWS region
   # Add other authentication parameters if necessary
 }
 
@@ -55,12 +55,12 @@ module "ec2_instance" {
 #  eip_id      = module.elastic_ip_allocation.elastic_ip_allocation_id
 #}
 
-module "example_s3_bucket" {
-  source = "./modules/s3_bucket"
-
-  bucket_name = "testingsouckmus" # Change to your desired bucket name
-  bucket_acl  = "public-read"         # Allow all public access
-}
+#module "example_s3_bucket" {
+#  source = "./modules/s3_bucket"#
+#
+ # bucket_name = "testingsouckmus" # Change to your desired bucket name
+  #bucket_acl  = "public-read"         # Allow all public access
+#}
 output "Sample_page_url" {
   value = "http://${module.ec2_instance.public_ip}"
 }
