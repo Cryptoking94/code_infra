@@ -50,7 +50,7 @@ module "ec2_instance" {
   instance_type       = "t2.micro"
   ami                 = "ami-03f4878755434977f" // replace with your AMI
   subnet_id           = module.public_subnet.subnet_id
-  security_group_ids  = ["${module.security_group.security_group_id}"]
+  security_group_ids = [module.security_group.security_group_id]
   key_pair_name        = "Terraform-Instance"
 }
 
