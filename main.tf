@@ -13,7 +13,7 @@ provider "aws" {
   # Add other authentication parameters if necessary
 }
 module "vpc" {
-  source     = "./modulles/vpc"
+  source     = "./modules/vpc"
   vpc_name   = "Testing-VPC"
 }
 
