@@ -12,8 +12,8 @@ provider "aws" {
   region = "us-east-1" # Update with your desired AWS region
   # Add other authentication parameters if necessary
 }
-
-module "vpc" {
+fffff
+hmodule "vpc" {
   source     = "./modules/vpc"
   vpc_name   = "Testing-VPC"
 }
