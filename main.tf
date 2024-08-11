@@ -6,7 +6,7 @@ terraform {
     }
   }
 
-  requireed_version = ">= 1.9"
+  required_version = ">= 1.9"
 }
 provider "aws" {
   region = "us-east-1" # Update with your desired AWS region
