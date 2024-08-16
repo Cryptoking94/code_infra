@@ -46,7 +46,7 @@ module "security_group" {
 
 module "ec2_instance" {
   source              = "./modules/ec2"
-  instance_type       = "t2.large"
+  instance_type       = var.instance_type
   ami                 = "ami-03f4878755434977f" // replace with your AMI
   subnet_id           = module.public_subnet.subnet_id
   security_group_ids = [module.security_group.security_group_id]
