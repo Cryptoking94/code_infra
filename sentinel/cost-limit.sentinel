@@ -1,0 +1,16 @@
+# sentinel/cost-limit.sentinel
+
+import "tfplan"
+import "infracost"
+
+# Define your cost limit here
+cost_limit = 100.00
+
+cost_estimates = infracost.cost_plans()
+
+# Fail if any cost estimate exceeds the limit
+main = rule {
+    all cost_estimates as cost_estimate {
+        cost_estimate.estimate <= cost_limit
+    }
+}
